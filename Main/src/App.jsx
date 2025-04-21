@@ -1,12 +1,16 @@
-import { useState } from 'react'
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-function App() {
+import Main from "./components/Main";
 
+
+export default function App() {
   return (
-    <>
-    </>
-  )
+    <Router>
+    
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
+    </Router>
+  );
 }
-
-export default App
