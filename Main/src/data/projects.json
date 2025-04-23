@@ -82,5 +82,33 @@
 		"extra_image1": "/images/extra1a.jpg",
 		"extra_image2": "/images/extra1b.jpg",
 		"extra_image3": "/images/extra1c.jpg"
-	}
+	},
+  {
+    "id": 7,
+    "name": "Fleur",
+    "surname": "Van De Ville",
+    "fable_title": "ROODKAPJE",
+    "genre": "Animal",
+    "cover": "./images/the-fox-and-the-grapes.webp",
+    "banner": "/images/banner1.jpg",
+    "description": "A cunning fox tries to reach some grapes but gives up when he can't, claiming they're probably sour anyway.",
+    "video_making_off": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "extra_image1": "/images/extra1a.jpg",
+    "extra_image2": "/images/extra1b.jpg",
+    "extra_image3": "/images/extra1c.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Fleur",
+    "surname": "Van De Ville",
+    "fable_title": "ROODKAPJE",
+    "genre": "Animal",
+    "cover": "./images/the-fox-and-the-grapes.webp",
+    "banner": "/images/banner1.jpg",
+    "description": "A cunning fox tries to reach some grapes but gives up when he can't, claiming they're probably sour anyway.",
+    "video_making_off": "https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+    "extra_image1": "/images/extra1a.jpg",
+    "extra_image2": "/images/extra1b.jpg",
+    "extra_image3": "/images/extra1c.jpg"
+  }
 ]

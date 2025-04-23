@@ -8,7 +8,7 @@ function MakingOf() {
 	return (
 		<div className="container">
 			<div>
-				<h2>MAKING OF - {project.fable_title}</h2>
+				<h1>MAKING OF - {project.fable_title}</h1>
 				<img className="banner" src={project.banner} alt="" />
 			</div>
 			<div className="lower-part">

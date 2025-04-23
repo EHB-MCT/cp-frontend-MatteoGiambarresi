@@ -1,29 +1,33 @@
 import { Link } from "react-router";
 import SearchFilter from "./SearchFilter";
+
 function Navbar() {
 	return (
 		<div className="container">
-			<div className="nav-container">
-				<div>
+			<div className="lower-part navba">
+				<div className="making-of-video">
 					<Link to="/">
-						<img src="./images/logo.png" alt="Logo" className="image" />
+						<img src="./images/logo.png" alt="" className="imagenav" />
 					</Link>
 				</div>
-				<nav>
-					<ul className="nav-links">
-						<li>
-							<Link to="/">HOME</Link>
-						</li>
-						<li>
-							<Link to="/projects">PROJECTS</Link>
-						</li>
-						<li>
-							<Link to="/making-of">MAKING-OF</Link>
-						</li>
-					</ul>
-					
-				</nav>
+				<div className="description">
+					<div className="navlinks">
+						<Link to="/">
+							<h3>HOME</h3>
+						</Link>
+						<Link to="/projects">
+							<h3>PROJECTS</h3>
+						</Link>
+						<Link to="/making-of/1">
+							<h3>MAKING OF</h3>
+						</Link>
+					</div>
+					<div className="search">
+						<SearchFilter />
+					</div>
+				</div>
 			</div>
+			<div className="line"></div>
 		</div>
 	);
 }
