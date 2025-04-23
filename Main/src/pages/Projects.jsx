@@ -3,7 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
 	return (
-		<div className="project-wrapper">
+		<div className="container">
       	<h1>All Projects</h1>
 			<div className="project-card-container">
 				{projects.map((project) => (

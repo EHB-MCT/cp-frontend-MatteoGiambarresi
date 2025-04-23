@@ -8,10 +8,10 @@ function Navbar() {
 						<Link to="/">HOME</Link>
 					</li>
 					<li>
-						<Link to="/Projects">PROJECTS</Link>
+						<Link to="/projects">PROJECTS</Link>
 					</li>
 					<li>
-						<Link to="/MakingOf">MAKING-OF</Link>
+						<Link to="/making-of/1">MAKING-OF</Link>
 					</li>
 				</ul>
 			</nav>

@@ -2,17 +2,19 @@ import { useParams, Link } from "react-router-dom";
 import projects from "../data/projects.json";
 
 function MakingOf() {
-  const { id } = useParams();
-  const project = projects.find(project => project.id === parseInt(id));
+	const { id } = useParams();
+	const project = projects.find((project) => project.id === parseInt(id));
 
+	return (
+		<div className="container">
+			<h1>
+				MAKING  OF - {project.fable_title}
+			</h1>
+			<img className="banner" src={project.banner} alt="" />
 
-  return (
-    <div>
-      <Link to="/projects">← Back to Projects</Link>
-      <h1>{project.fable_title}</h1>
-      <p>{project.description}</p>
-      </div>
-  );
+			<p>{project.description}</p>
+		</div>
+	);
 }
 
 export default MakingOf;
