@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import projects from "../data/projects.json";
 
-function MakingOf() {
+const MakingOf = () => {
 	const { id } = useParams();
 	const project = projects.find((project) => project.id === parseInt(id));
 
@@ -30,6 +30,6 @@ function MakingOf() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default MakingOf;

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function ProjectCard({ project }) {
+const ProjectCard = ({ project }) => {
 	return (
 		<div className="project-card-container">
 			<div className="project-card">
@@ -21,4 +21,6 @@ export default function ProjectCard({ project }) {
 			</div>
 		</div>
 	);
-}
+};
+
+export default ProjectCard;

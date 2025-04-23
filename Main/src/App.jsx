@@ -10,7 +10,7 @@ import Error from "./pages/Error";
 import "./App.css";
 import MakingOf from "./pages/MakingOf";
 
-export default function App() {
+const App = () => {
 	const [searchTerm, setSearchTerm] = useState("");
 	return (
 		<Router>
@@ -25,4 +25,6 @@ export default function App() {
 			<Footer />
 		</Router>
 	);
-}
+};
+
+export default App;

@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import SearchFilter from "./SearchFilter";
 
-function Navbar({ searchTerm, setSearchTerm }) {
+const Navbar = ({ searchTerm, setSearchTerm }) => {
 	return (
 		<div className="container">
 			<div className="lower-part navba">
@@ -24,5 +24,6 @@ function Navbar({ searchTerm, setSearchTerm }) {
 			<div className="line"></div>
 		</div>
 	);
-}
+};
+
 export default Navbar;
