@@ -1,13 +1,19 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
-import projects from "../data/projects.json";
+import projectsData from "../data/projects.json";
 import { Link } from "react-router-dom";
-const Main = () => {
+const Main = ({ searchTerm = "" }) => {
+	const filteredProjects = projectsData.filter(
+		(project) =>
+			project.fable_title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+			project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+			project.surname.toLowerCase().includes(searchTerm.toLowerCase())
+	);
 	return (
 		<div className="container">
 			<h1>IN THE SPOTLIGHT</h1>
 			<div className="project-card-container">
-				{projects.slice(0, 4).map((project) => (
+				{filteredProjects.slice(0, 4).map((project) => (
 					<ProjectCard key={project.id} project={project} />
 				))}
 			</div>

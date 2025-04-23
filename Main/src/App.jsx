@@ -8,7 +8,6 @@ import ProjectDetail from "./pages/ProjectDetail";
 import Footer from "./components/Footer";
 import Error from "./pages/Error";
 import "./App.css";
-import SearchFilter from "./components/SearchFilter";
 import MakingOf from "./pages/MakingOf";
 
 export default function App() {
@@ -17,7 +16,7 @@ export default function App() {
 		<Router>
 			<Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 			<Routes>
-				<Route path="/" element={<Main />} />
+				<Route path="/" element={<Main searchTerm={searchTerm}/>} />
 				<Route path="/projects" element={<Projects searchTerm={searchTerm} />} />
 				<Route path="/projects/:id" element={<ProjectDetail />} />
 				<Route path="/making-of/:id" element={<MakingOf />} />
