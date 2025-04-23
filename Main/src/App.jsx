@@ -14,15 +14,27 @@ const App = () => {
 	const [searchTerm, setSearchTerm] = useState("");
 	return (
 		<Router>
-			<Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 			<Routes>
-				<Route path="/" element={<Main searchTerm={searchTerm}/>} />
-				<Route path="/projects" element={<Projects searchTerm={searchTerm} />} />
-				<Route path="/projects/:id" element={<ProjectDetail />} />
-				<Route path="/making-of/:id" element={<MakingOf />} />
-				<Route path="*" element={<Error />} />
+				<Route
+					path="/projects/:id"
+					element={<ProjectDetail />}
+				/>
+				<Route
+					path="*"
+					element={
+						<>
+							<Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+							<Routes>
+								<Route path="/" element={<Main searchTerm={searchTerm} />} />
+								<Route path="/projects" element={<Projects searchTerm={searchTerm} />} />
+								<Route path="/making-of/:id" element={<MakingOf />} />
+								<Route path="*" element={<Error />} />
+							</Routes>
+							<Footer />
+						</>
+					}
+				/>
 			</Routes>
-			<Footer />
 		</Router>
 	);
 };
