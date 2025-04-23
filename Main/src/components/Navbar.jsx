@@ -7,7 +7,7 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
 			<div className="lower-part navba">
 				<div className="making-of-video">
 					<Link to="/">
-						<img src="./images/logo.png" alt="" className="imagenav" />
+						<img src="/logo.png" alt="" className="imagenav" />
 					</Link>
 				</div>
 				<div className="description">

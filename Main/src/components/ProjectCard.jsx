@@ -15,7 +15,7 @@ const ProjectCard = ({ project }) => {
 						</b>
 					</p>
 					<Link to={`/making-of/${project.id}`}>
-						<img src="./images/info-icon.png" alt="" className="project-card-info-icon" />
+						<img src="/info-icon.png" alt="" className="project-card-info-icon" />
 					</Link>
 				</div>
 			</div>
