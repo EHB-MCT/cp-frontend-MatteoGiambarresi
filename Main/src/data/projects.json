@@ -1,11 +1,11 @@
 [
     {
       "id": 1,
-      "name": "Alice",
-      "surname": "Smith",
-      "fable_title": "The Fox and the Grapes",
+      "name": "Fleur",
+      "surname": "Van De Ville",
+      "fable_title": "ROODKAPJE",
       "genre": "Animal",
-      "cover": "/images/cover1.jpg",
+      "cover": "./images/the-fox-and-the-grapes.webp",
       "banner": "/images/banner1.jpg",
       "description": "A cunning fox tries to reach some grapes but gives up when he can't, claiming they're probably sour anyway.",
       "video_making_off": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",

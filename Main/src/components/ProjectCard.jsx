@@ -1,15 +1,23 @@
 import { Link } from "react-router-dom";
 
 export default function ProjectCard({ project }) {
-  return (
-    <div>
-      {project.cover && <img src={project.cover} alt={project.fable_title} width="100%" />}
-      <h2>{project.fable_title}</h2>
-      <p>By {project.name} {project.surname}</p>
-      <p><strong>Genre:</strong> {project.genre}</p>
-      <Link to={`/projects/${project.id}`}>
-        <button>Check fable</button>
-      </Link>
-    </div>
-  );
+	return (
+		<div className="project-card">
+			 <Link to={`/projects/${project.id}`}>
+       <img className="project-card-cover" src={project.cover} alt={project.fable_title} />
+       </Link>
+			<div className="flex">
+				<p className="project-card-title">
+					{project.fable_title} <br />
+					<b>
+						{project.name} {project.surname}{" "}
+					</b>
+				</p>
+				<Link to={`/MakingOf/${project.id}`}>
+					<img src="./images/info-icon.png" alt="" className="project-card-info-icon" />
+				</Link>
+			
+			</div>
+		</div>
+	);
 }

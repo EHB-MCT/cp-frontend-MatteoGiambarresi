@@ -4,7 +4,6 @@
 	font-family: Arial, sans-serif;
 	/* background: url(./images/background_image.png) no-repeat center center/cover; */
 	background-color: #ebf4ec;
-
 }
 
 a {
@@ -36,7 +35,6 @@ button {
 	transition: border-color 0.25s;
 }
 
-
 .image {
 	max-width: 120px;
 }
@@ -53,63 +51,99 @@ footer {
 }
 
 nav {
-  text-align: center;
+	text-align: center;
 }
 
 nav ul {
-  padding: 0;
-  margin: 0;
-  display: inline-block;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
 }
 
 nav ul li {
-  list-style: none;
-  display: inline-block;
-  margin: 0 15px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+	list-style: none;
+	display: inline-block;
+	margin: 0 15px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-weight: 750;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	font-weight: 750;
 }
 
 .searchFilter {
-  display: flex;
-  align-items: center;
-  border: 3px solid black;
-  border-radius: 25px;
-  overflow: hidden;
-  width: 100%;
-  max-width: 600px;
-  margin: 20px auto;
+	display: flex;
+	align-items: center;
+	border: 3px solid black;
+	border-radius: 25px;
+	overflow: hidden;
+	width: 100%;
+	max-width: 600px;
+	margin: 20px auto;
 }
 
 .searchFilter input[type="text"] {
-  flex: 1;
-  border: none;
-  padding: 10px 15px;
-  font-size: 16px;
-  outline: none;
+	flex: 1;
+	border: none;
+	padding: 10px 15px;
+	font-size: 16px;
+	outline: none;
 }
 
 .searchFilter button {
-  background-color: red;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 0 25px 25px 0;
-  transition: background-color 0.3s ease;
+	background-color: red;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 0 25px 25px 0;
+	transition: background-color 0.3s ease;
 }
 
 .searchFilter button:hover {
-  background-color: darkred;
+	background-color: darkred;
+}
+
+.project-card {
+	width: 350px;
+	margin: 20px;
+}
+
+.project-card-cover {
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
+}
+
+.project-card-title {
+	font-size: 16px;
+	font-weight: 700;
+	color: #333;
+	margin: 10px 0;
+	font-family: "Helvetica Neue", sans-serif;
+}
+b {
+	color: #767676;
+}
+.project-card-info-icon{
+  max-width: 20px;
+  background-color: #e04350;
+  border-radius: 50px;
+  padding: 10px;
+}
+.project-card-info-icon:hover {
+	background-color: #c43b47;
+}
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
