@@ -3,7 +3,7 @@ import projects from "../data/projects.json";
 
 export default function ProjectDetail() {
   const { id } = useParams();
-  const project = projects.find(p => p.id === parseInt(id));
+  const project = projects.find(project => project.id === parseInt(id));
 
 
   return (
