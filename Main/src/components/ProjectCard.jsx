@@ -14,7 +14,7 @@ export default function ProjectCard({ project }) {
 							{project.name} {project.surname}{" "}
 						</b>
 					</p>
-					<Link to={`/MakingOf/${project.id}`}>
+					<Link to={`/making-of/${project.id}`}>
 						<img src="./images/info-icon.png" alt="" className="project-card-info-icon" />
 					</Link>
 				</div>

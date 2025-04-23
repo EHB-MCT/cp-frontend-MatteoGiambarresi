@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import projects from "../data/projects.json";
 
-export default function ProjectDetail() {
+function MakingOf() {
   const { id } = useParams();
   const project = projects.find(project => project.id === parseInt(id));
 
@@ -14,3 +14,5 @@ export default function ProjectDetail() {
       </div>
   );
 }
+
+export default MakingOf;
