@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import SearchFilter from "./SearchFilter";
 
-function Navbar() {
+function Navbar({ searchTerm, setSearchTerm }) {
 	return (
 		<div className="container">
 			<div className="lower-part navba">
@@ -12,18 +12,12 @@ function Navbar() {
 				</div>
 				<div className="description">
 					<div className="navlinks">
-						<Link to="/">
-							<h3>HOME</h3>
-						</Link>
-						<Link to="/projects">
-							<h3>PROJECTS</h3>
-						</Link>
-						<Link to="/making-of/1">
-							<h3>MAKING OF</h3>
-						</Link>
+						<Link to="/"><h3>HOME</h3></Link>
+						<Link to="/projects"><h3>PROJECTS</h3></Link>
+						<Link to="/making-of/1"><h3>MAKING OF</h3></Link>
 					</div>
 					<div className="search">
-						<SearchFilter />
+						<SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 					</div>
 				</div>
 			</div>

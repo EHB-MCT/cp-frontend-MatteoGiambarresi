@@ -3,7 +3,7 @@
 	padding: 0;
 	font-family: Arial, sans-serif;
 	background: url(./images/background_image.png) no-repeat center top/cover;
-  background-attachment: fixed;
+	background-attachment: fixed;
 	background-color: #ebf4ec;
 }
 
@@ -121,7 +121,7 @@ nav a {
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: bold;
-	border-radius: 0 25px 25px 0;
+	border-radius: 0 20px 20px 0;
 	transition: background-color 0.3s ease;
 	border-left: 3px solid black;
 }
@@ -132,7 +132,7 @@ nav a {
 
 .project-card {
 	width: 300px;
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 .project-card-cover {
@@ -169,7 +169,7 @@ b {
 .project-card-container {
 	display: flex;
 	flex-wrap: wrap;
-  justify-content: space-between;
+	justify-content: space-between;
 }
 
 .container {

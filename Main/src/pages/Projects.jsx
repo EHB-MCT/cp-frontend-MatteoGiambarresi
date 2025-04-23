@@ -1,7 +1,14 @@
-import projects from "../data/projects.json";
+import projectsData from "../data/projects.json";
 import ProjectCard from "../components/ProjectCard";
 
-export default function Projects() {
+export default function Projects({ searchTerm = "" }) {
+	const filteredProjects = projectsData.filter(
+		(project) =>
+			project.fable_title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+			project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+			project.surname.toLowerCase().includes(searchTerm.toLowerCase())
+	);
+
 	return (
 		<div>
 			<div className="container">
@@ -9,7 +16,7 @@ export default function Projects() {
 			</div>
 			<div className="container project">
 				<div className="project-card-container">
-					{projects.map((project) => (
+					{filteredProjects.map((project) => (
 						<ProjectCard key={project.id} project={project} />
 					))}
 				</div>

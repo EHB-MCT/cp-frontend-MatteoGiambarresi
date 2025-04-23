@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Main from "./pages/Main";
 import Projects from "./pages/Projects";
@@ -12,12 +12,13 @@ import SearchFilter from "./components/SearchFilter";
 import MakingOf from "./pages/MakingOf";
 
 export default function App() {
+	const [searchTerm, setSearchTerm] = useState("");
 	return (
 		<Router>
-			<Navbar />
+			<Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 			<Routes>
 				<Route path="/" element={<Main />} />
-				<Route path="/projects" element={<Projects />} />
+				<Route path="/projects" element={<Projects searchTerm={searchTerm} />} />
 				<Route path="/projects/:id" element={<ProjectDetail />} />
 				<Route path="/making-of/:id" element={<MakingOf />} />
 				<Route path="*" element={<Error />} />
