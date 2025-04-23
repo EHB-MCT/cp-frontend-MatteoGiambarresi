@@ -15,7 +15,6 @@ export default function App() {
 	return (
 		<Router>
 			<Navbar />
-			<SearchFilter />
 			<Routes>
 				<Route path="/" element={<Main />} />
 				<Route path="/projects" element={<Projects />} />
@@ -23,8 +22,7 @@ export default function App() {
 				<Route path="/making-of/:id" element={<MakingOf />} />
 				<Route path="*" element={<Error />} />
 			</Routes>
-      <Footer />
+			<Footer />
 		</Router>
-    
 	);
 }
