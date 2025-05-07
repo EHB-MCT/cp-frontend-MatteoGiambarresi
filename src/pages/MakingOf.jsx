@@ -1,9 +1,8 @@
-import { useParams, Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 import projects from "../data/projects.json";
 
 const MakingOf = () => {
-	const { id } = useParams();
-	const project = projects.find((project) => project.id === parseInt(id));
+	const project = projects.find((project) => project.id);
 
 	return (
 		<div className="container">
