@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Main from "./pages/Main";
@@ -13,7 +13,7 @@ import MakingOf from "./pages/MakingOf";
 const App = () => {
 	const [searchTerm, setSearchTerm] = useState("");
 	return (
-		<Router basename="/{cp-frontend-MatteoGiambarresi}/">
+		<BrowserRouter basename="/{cp-frontend-MatteoGiambarresi}/">
 			<Routes>
 				<Route
 					path="/projects/:id"
@@ -35,7 +35,7 @@ const App = () => {
 					}
 				/>
 			</Routes>
-		</Router>
+		</BrowserRouter>
 	);
 };
 
