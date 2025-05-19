@@ -13,7 +13,7 @@ import MakingOf from "./pages/MakingOf";
 const App = () => {
 	const [searchTerm, setSearchTerm] = useState("");
 	return (
-		<BrowserRouter basename="/{cp-frontend-MatteoGiambarresi}/">
+		<BrowserRouter basename="/cp-frontend-MatteoGiambarresi">
 			<Routes>
 				<Route
 					path="/projects/:id"
