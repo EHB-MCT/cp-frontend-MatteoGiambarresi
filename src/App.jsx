@@ -29,7 +29,7 @@ const App = () => {
 								<Route path="/" element={<Main searchTerm={searchTerm} />} />
 								<Route path="/projects" element={<Projects searchTerm={searchTerm} />} />
 								<Route path="/making-of/:id" element={<MakingOf />} />
-								<Route path="/parallax" basename="/cp-frontend-MatteoGiambarresi" element={<Parallax />} />
+								<Route path="/parallax" basename="/cp-frontend-MatteoGiambarresi/Parallax" element={<Parallax />} />
 								<Route path="*" element={<Error />} />
 							</Routes>
 							<Footer />
