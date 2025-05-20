@@ -23,6 +23,11 @@ const Main = ({ searchTerm = "" }) => {
 						<h3>all projects</h3>
 					</button>
 				</Link>
+				<Link to={`/parallax`}>
+					<button className="making-of">
+						<h3>sprrokje</h3>
+					</button>
+				</Link>
 			</div>
 		</div>
 	);
