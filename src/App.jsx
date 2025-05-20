@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Error from "./pages/Error";
 import "./App.css";
 import MakingOf from "./pages/MakingOf";
+import Parallax from "./pages/Parallax";
 
 const App = () => {
 	const [searchTerm, setSearchTerm] = useState("");
@@ -28,6 +29,7 @@ const App = () => {
 								<Route path="/" element={<Main searchTerm={searchTerm} />} />
 								<Route path="/projects" element={<Projects searchTerm={searchTerm} />} />
 								<Route path="/making-of/:id" element={<MakingOf />} />
+								<Route path="/parallax" element={<Parallax />} />
 								<Route path="*" element={<Error />} />
 							</Routes>
 							<Footer />
