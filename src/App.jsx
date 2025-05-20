@@ -12,14 +12,17 @@ import MakingOf from "./pages/MakingOf";
 import Parallax from "./pages/Parallax";
 
 const App = () => {
+	const redirect = new URLSearchParams(window.location.search).get("redirect");
+	if (redirect) {
+		// Ajoute le basename ici
+		window.history.replaceState(null, "", `/cp-frontend-MatteoGiambarresi${redirect}`);
+	}
+
 	const [searchTerm, setSearchTerm] = useState("");
 	return (
-		<BrowserRouter basename="/cp-frontend-MatteoGiambarresi">
+		<BrowserRouter basename="/cp-frontend-MatteoGiambarresi/">
 			<Routes>
-				<Route
-					path="/projects/:id"
-					element={<ProjectDetail />}
-				/>
+				<Route path="/projects/:id" element={<ProjectDetail />} />
 				<Route
 					path="*"
 					element={
@@ -29,7 +32,7 @@ const App = () => {
 								<Route path="/" element={<Main searchTerm={searchTerm} />} />
 								<Route path="/projects" element={<Projects searchTerm={searchTerm} />} />
 								<Route path="/making-of/:id" element={<MakingOf />} />
-								<Route path="/parallax" basename="/cp-frontend-MatteoGiambarresi/Parallax" element={<Parallax />} />
+								<Route path="/parallax" element={<Parallax />} />
 								<Route path="*" element={<Error />} />
 							</Routes>
 							<Footer />
