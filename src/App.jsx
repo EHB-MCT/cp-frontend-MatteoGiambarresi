@@ -14,7 +14,6 @@ import Parallax from "./pages/Parallax";
 const App = () => {
 	const redirect = new URLSearchParams(window.location.search).get("redirect");
 	if (redirect) {
-		// Ajoute le basename ici
 		window.history.replaceState(null, "", `/cp-frontend-MatteoGiambarresi${redirect}`);
 	}
 
