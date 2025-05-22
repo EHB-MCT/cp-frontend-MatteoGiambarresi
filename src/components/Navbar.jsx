@@ -12,9 +12,13 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
 				</div>
 				<div className="description">
 					<div className="navlinks">
+						<div className="home">
+
+						
 						<Link to="/">
 							<h3>HOME</h3>
 						</Link>
+						</div>
 						<Link to="/projects">
 							<h3>PROJECTS</h3>
 						</Link>
@@ -25,11 +29,12 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
 							<h3>PARALLAX</h3>
 						</Link>
 					</div>
+					<div className="search">
+						<SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+					</div>
 				</div>
 			</div>
-			<div className="search">
-				<SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-			</div>
+
 			<div className="line"></div>
 		</div>
 	);
