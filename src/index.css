@@ -283,6 +283,22 @@ b {
 .bird2 {
 	animation: bounce 0.2s infinite alternate;
 }
+
+.note1 {
+	margin-left: 700px;
+	margin-top: -50px;
+	animation: bounce 2s infinite alternate;
+}
+.note2 {
+	margin-left: 800px;
+	margin-top: -220px;
+	animation: bounce 2.5s infinite alternate;
+}
+.note3 {
+	margin-left: 650px;
+	margin-top: 150px;
+	animation: bounce 1.8s infinite alternate;
+}
 @keyframes bounce {
 	0% {
 		transform: translateY(0);

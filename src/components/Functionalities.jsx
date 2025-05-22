@@ -5,9 +5,9 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 export default function Functionalities() {
 	const controls = useAnimation();
 	const controls2 = useAnimation();
-    const controls3 = useAnimation();
-    const controls4 = useAnimation();
-    const controls5 = useAnimation();
+	const controls3 = useAnimation();
+	const controls4 = useAnimation();
+	const controls5 = useAnimation();
 
 	useEffect(() => {
 		document.body.style.overflow = "hidden";
@@ -20,6 +20,10 @@ export default function Functionalities() {
 				document.body.style.overflowY = "auto";
 			});
 	}, [controls]);
+	const playSound = (file) => {
+		const audio = new Audio(`./fable/sounds/${file}`);
+		audio.play();
+	};
 	const inViewConfigs = [{ threshold: 0.5 }, { threshold: 0.5 }];
 	const inViews = inViewConfigs.map((cfg) => useInView(cfg));
 	const [ref1, inView1] = inViews[0];
@@ -35,7 +39,7 @@ export default function Functionalities() {
 				left: "10%",
 				transition: { duration: 5, ease: "easeOut", delay: 2 },
 			});
-            	controls4.start({
+			controls4.start({
 				top: "70vh",
 				transition: { duration: 20, ease: "easeOut" },
 			});
@@ -51,10 +55,11 @@ export default function Functionalities() {
 
 	return {
 		controls,
-        controls2,
-        controls3,
-        controls4,
-        controls5,
+		controls2,
+		controls3,
+		controls4,
+		controls5,
+        playSound,
 		refs: [ref1, ref2],
 		inViews: [inView1, inView2],
 	};
