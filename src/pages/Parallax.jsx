@@ -5,12 +5,15 @@ import Scene1 from "../components/Scene1";
 import Scene2 from "../components/Scene2";
 import Scene3 from "../components/Scene3";
 import Scene4 from "../components/Scene4";
+import Scene5 from "../components/Scene5";
+import Footer2 from "../components/Footer2";
 import { Parallax } from "@react-spring/parallax";
 import Functionalities from "../components/Functionalities";
 import Text1 from "../components/Text1";
 import Text2 from "../components/Text2";
 import Text3 from "../components/Text3";
 import Text4 from "../components/Text4";
+import Text5 from "../components/Text5";
 import Notes from "../components/Notes";
 
 export default function ParallaxW() {
@@ -18,10 +21,10 @@ export default function ParallaxW() {
 		controls,
 		controls2,
 		controls3,
-    controls4,
-    controls5,
-    playSound,
-		refs: [ref1, ref2, ref3,  ref4, ref5, ref6],
+		controls4,
+		controls5,
+		playSound,
+		refs: [ref1, ref2, ref3, ref4, ref5, ref6],
 		inViews: [inView1, inView2, inView3, inView4, inView5, inView6],
 	} = Functionalities();
 
@@ -34,10 +37,13 @@ export default function ParallaxW() {
 				<Scene2 controls2={controls2} controls3={controls3} />
 				<Text2 ref2={ref2} inView2={inView2} />
 				<Scene3 control4={controls4} controls5={controls5} />
-        <Notes playSound={playSound} />
-        <Text3 ref3={ref3} inView3={inView3} />
-        <Scene4 ref4={ref4} inView4={inView4} />
-        <Text4 ref5={ref5} inView5={inView5} />
+				<Notes playSound={playSound} />
+				<Text3 ref3={ref3} inView3={inView3} />
+				<Scene4 ref4={ref4} inView4={inView4} />
+				<Text4 ref5={ref5} inView5={inView5} />
+				<Scene5 />
+				<Text5 ref6={ref6} inView6={inView6} />
+				<Footer2 />
 			</Parallax>
 		</div>
 	);

@@ -299,6 +299,10 @@ b {
 	margin-top: 150px;
 	animation: bounce 1.8s infinite alternate;
 }
+
+.text-layer h1 {
+	font-size: 96px;
+}
 @keyframes bounce {
 	0% {
 		transform: translateY(0);
@@ -306,4 +310,40 @@ b {
 	100% {
 		transform: translateY(-40px);
 	}
+}
+
+.footer {
+	width: 100%;
+	height: 500px;
+	background: #9a96ed;
+	color: #fff;
+	padding: 60px 0;
+	text-align: center;
+	bottom: 0;
+	left: 0;
+	z-index: 200;
+	margin-bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+}
+.button2 {
+	background-color: #7f11e5;
+	color: white;
+	border: none;
+	padding: 15px 40px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 20px;
+	transition: background-color 0.3s ease;
+}
+.button2:hover {
+	background-color: #670eba;
+}
+.footer h1 {
+	font-size: 40px;
+	margin-bottom: 20px;
 }
