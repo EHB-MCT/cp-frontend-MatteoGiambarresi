@@ -22,6 +22,7 @@ const App = () => {
 		<BrowserRouter basename="/cp-frontend-MatteoGiambarresi/">
 			<Routes>
 				<Route path="/projects/:id" element={<ProjectDetail />} />
+				<Route path="/parallax" element={<Parallax />} />
 				<Route
 					path="*"
 					element={
@@ -31,7 +32,7 @@ const App = () => {
 								<Route path="/" element={<Main searchTerm={searchTerm} />} />
 								<Route path="/projects" element={<Projects searchTerm={searchTerm} />} />
 								<Route path="/making-of/:id" element={<MakingOf />} />
-								<Route path="/parallax" element={<Parallax />} />
+
 								<Route path="*" element={<Error />} />
 							</Routes>
 							<Footer />
