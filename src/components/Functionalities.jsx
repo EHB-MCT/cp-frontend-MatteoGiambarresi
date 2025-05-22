@@ -18,9 +18,10 @@ export default function Functionalities() {
 				document.body.style.overflowY = "auto";
 			});
 	}, [controls]);
-	const inViewConfigs = [{ threshold: 0.5 }];
+	const inViewConfigs = [{ threshold: 0.5 }, { threshold: 0.5 }];
 	const inViews = inViewConfigs.map((cfg) => useInView(cfg));
 	const [ref1, inView1] = inViews[0];
+	const [ref2, inView2] = inViews[1];
 
 	useEffect(() => {
 		if (inView1) {
@@ -39,7 +40,7 @@ export default function Functionalities() {
 		controls,
         controls2,
         controls3,
-		refs: [ref1],
-		inViews: [inView1],
+		refs: [ref1, ref2],
+		inViews: [inView1, inView2],
 	};
 }
