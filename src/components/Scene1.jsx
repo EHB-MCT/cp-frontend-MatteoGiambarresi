@@ -42,13 +42,15 @@ export default function Scene1() {
 					left: 0,
 				}}
 			>
-				<motion.h1
-					initial={{ scale: 1 }}
+			<motion.h1
+					initial={{ scale: 1, opacity: 1 }}
 					animate={{
-						scale: 2,
+						scale: [1, 2, 2],
+						opacity: [1, 1, 0],
 					}}
 					transition={{
-						duration: 2,
+						duration: 5,
+						times: [0, 0.4, 1],
 						ease: "easeInOut",
 						delay: 2,
 					}}
@@ -57,6 +59,7 @@ export default function Scene1() {
 						textAlign: "center",
 						fontSize: "60px",
 						margin: 0,
+						pointerEvents: "auto",
 					}}
 				>
 					De Raaf en de Vos
