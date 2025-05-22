@@ -8,6 +8,7 @@ import { Parallax } from "@react-spring/parallax";
 import Functionalities from "../components/Functionalities";
 import Text1 from "../components/Text1";
 import Text2 from "../components/Text2";
+import Text3 from "../components/Text3";
 import Notes from "../components/Notes";
 
 export default function ParallaxW() {
@@ -18,8 +19,8 @@ export default function ParallaxW() {
     controls4,
     controls5,
     playSound,
-		refs: [ref1, ref2],
-		inViews: [inView1, inView2],
+		refs: [ref1, ref2, ref3],
+		inViews: [inView1, inView2, inView3],
 	} = Functionalities();
 
 	return (
@@ -32,6 +33,7 @@ export default function ParallaxW() {
 				<Text2 ref2={ref2} inView2={inView2} />
 				<Scene3 control4={controls4} controls5={controls5} />
         <Notes playSound={playSound} />
+        <Text3 ref3={ref3} inView3={inView3} />
 			</Parallax>
 		</div>
 	);

@@ -24,10 +24,11 @@ export default function Functionalities() {
 		const audio = new Audio(`./fable/sounds/${file}`);
 		audio.play();
 	};
-	const inViewConfigs = [{ threshold: 0.5 }, { threshold: 0.5 }];
+	const inViewConfigs = [{ threshold: 0.5 }, { threshold: 0.5 }, { threshold: 0.5 }];
 	const inViews = inViewConfigs.map((cfg) => useInView(cfg));
 	const [ref1, inView1] = inViews[0];
 	const [ref2, inView2] = inViews[1];
+	const [ref3, inView3] = inViews[2];
 
 	useEffect(() => {
 		if (inView1) {
@@ -59,8 +60,8 @@ export default function Functionalities() {
 		controls3,
 		controls4,
 		controls5,
-        playSound,
-		refs: [ref1, ref2],
-		inViews: [inView1, inView2],
+		playSound,
+		refs: [ref1, ref2, ref3],
+		inViews: [inView1, inView2, inView3],
 	};
 }
