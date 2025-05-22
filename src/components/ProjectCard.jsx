@@ -5,13 +5,13 @@ const ProjectCard = ({ project }) => {
 		<div className="project-card-container">
 			<div className="project-card">
 				<Link to={`/projects/${project.id}`}>
-					<img className="project-card-cover" src={project.cover} alt={project.fable_title} />
+				<img src={project.imgThumbnail} alt={project.fairytale} />
 				</Link>
 				<div className="flex">
 					<p className="project-card-title">
-						{project.fable_title} <br />
+						{project.fairytale} <br />
 						<b>
-							{project.name} {project.surname}{" "}
+							{project.nameStudent}{" "}
 						</b>
 					</p>
 					<Link to={`/making-of/${project.id}`}>
@@ -20,6 +20,7 @@ const ProjectCard = ({ project }) => {
 				</div>
 			</div>
 		</div>
+		
 	);
 };
 
