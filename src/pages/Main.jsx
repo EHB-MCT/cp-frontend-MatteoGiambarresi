@@ -11,6 +11,7 @@ export default function Main({ searchTerm = "" }) {
 			project.surname.toLowerCase().includes(searchTerm.toLowerCase())
 	);
 	return (
+		<div className="wrapper-portaal">
 		<div className="container">
 			<h1>IN THE SPOTLIGHT</h1>
 			<div className="project-card-container">
@@ -30,6 +31,7 @@ export default function Main({ searchTerm = "" }) {
 					</button>
 				</Link>
 			</div>
+		</div>
 		</div>
 	);
 }

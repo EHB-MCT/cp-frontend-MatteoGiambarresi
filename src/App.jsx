@@ -27,15 +27,17 @@ const App = () => {
 					path="*"
 					element={
 						<>
-							<Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-							<Routes>
-								<Route path="/" element={<Main searchTerm={searchTerm} />} />
-								<Route path="/projects" element={<Projects searchTerm={searchTerm} />} />
-								<Route path="/making-of/:id" element={<MakingOf />} />
+							<div className="wrapper-portaal">
+								<Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+								<Routes>
+									<Route path="/" element={<Main searchTerm={searchTerm} />} />
+									<Route path="/projects" element={<Projects searchTerm={searchTerm} />} />
+									<Route path="/making-of/:id" element={<MakingOf />} />
 
-								<Route path="*" element={<Error />} />
-							</Routes>
-							<Footer />
+									<Route path="*" element={<Error />} />
+								</Routes>
+								<Footer />
+							</div>
 						</>
 					}
 				/>
