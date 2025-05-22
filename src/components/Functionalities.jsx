@@ -6,6 +6,8 @@ export default function Functionalities() {
 	const controls = useAnimation();
 	const controls2 = useAnimation();
     const controls3 = useAnimation();
+    const controls4 = useAnimation();
+    const controls5 = useAnimation();
 
 	useEffect(() => {
 		document.body.style.overflow = "hidden";
@@ -33,13 +35,26 @@ export default function Functionalities() {
 				left: "10%",
 				transition: { duration: 5, ease: "easeOut", delay: 2 },
 			});
+            	controls4.start({
+				top: "70vh",
+				transition: { duration: 20, ease: "easeOut" },
+			});
+			controls5.start({
+				marginTop: 0,
+				rotate: [-5, 5, -5],
+				transition: {
+					rotate: { repeat: Infinity, repeatType: "reverse", duration: 0.9, ease: "easeInOut" },
+				},
+			});
 		}
-	}, [inView1]);
+	});
 
 	return {
 		controls,
         controls2,
         controls3,
+        controls4,
+        controls5,
 		refs: [ref1, ref2],
 		inViews: [inView1, inView2],
 	};

@@ -59,7 +59,6 @@ export default function Scene1() {
 						textAlign: "center",
 						fontSize: "60px",
 						margin: 0,
-						pointerEvents: "auto",
 					}}
 				>
 					De Raaf en de Vos
