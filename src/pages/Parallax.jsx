@@ -28,29 +28,24 @@ export default function ParallaxW() {
 	} = Functionalities();
 
 	return (
-		<div
-			className="wrapper2"
-			style={{
-				backgroundImage: "url(./fable/Background_fable.png)",
-				backgroundSize: "cover",
-				backgroundPosition: "center",
-			}}
-		>
-			<ZoomIn controls={controls} />
-			<Parallax pages={12} style={{ top: "0", left: "0" }} className="animation">
-				<Scene1 />
-				<Text1 ref1={ref1} inView1={inView1} />
-				<Scene2 controls2={controls2} controls3={controls3} />
-				<Text2 ref2={ref2} inView2={inView2} />
-				<Scene3 controls4={controls4} controls5={controls5} />
-				<Notes playSound={playSound} />
-				<Text3 ref3={ref3} inView3={inView3} />
-				<Scene4 ref4={ref4} inView4={inView4} />
-				<Text4 ref5={ref5} inView5={inView5} />
-				<Scene5 />
-				<Text5 ref6={ref6} inView6={inView6} />
-				<Footer2 />
-			</Parallax>
+		<div className="wrapper2" style={{ backgroundColor: "#342e99" }}>
+			<div style={{ backgroundImage: "url(./fable/Background_fable.png)", backgroundSize: "cover", height: "100vh" }}>
+				<ZoomIn controls={controls} />
+				<Parallax pages={12} style={{ top: "0", left: "0" }} className="animation">
+					<Scene1 />
+					<Text1 ref1={ref1} inView1={inView1} />
+					<Scene2 controls2={controls2} controls3={controls3} />
+					<Text2 ref2={ref2} inView2={inView2} />
+					<Scene3 controls4={controls4} controls5={controls5} />
+					<Notes playSound={playSound} />
+					<Text3 ref3={ref3} inView3={inView3} />
+					<Scene4 ref4={ref4} inView4={inView4} />
+					<Text4 ref5={ref5} inView5={inView5} />
+					<Scene5 />
+					<Text5 ref6={ref6} inView6={inView6} />
+					<Footer2 />
+				</Parallax>
+			</div>
 		</div>
 	);
 }
