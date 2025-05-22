@@ -1,6 +1,10 @@
 import { useEffect } from "react";
 import { useAnimation } from "framer-motion";
-export default function Parallax() {
+import { ZoomIn } from "../components/ZoomIn";
+import Scene1 from "../components/Scene1";
+import { Parallax } from "@react-spring/parallax";
+
+export default function ParallaxW() {
 	const controls = useAnimation();
 	useEffect(() => {
 		document.body.style.overflow = "hidden";
@@ -16,7 +20,11 @@ export default function Parallax() {
 
 	return (
 		<div>
-			<h1>hello</h1>
+      <ZoomIn controls={controls} />
+			<Parallax pages={2} style={{ top: "0", left: "0" }} className="animation">
+				
+				<Scene1 />
+			</Parallax>
 		</div>
 	);
 }
