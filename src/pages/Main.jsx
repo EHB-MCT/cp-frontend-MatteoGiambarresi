@@ -1,37 +1,50 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard";
-import projectsData from "../data/projects.json";
 import { Link } from "react-router-dom";
 
-export default function Main({ searchTerm = "" }) {
-	const filteredProjects = projectsData.filter(
-		(project) =>
-			project.fable_title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-			project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-			project.surname.toLowerCase().includes(searchTerm.toLowerCase())
+async function getFairytaleCardItems() {
+	const response = await fetch(
+		"https://raw.githubusercontent.com/EHB-MCT/cp-frontend-MaximWesterbeek/refs/heads/main/course-project/public/api/fairytaleList.json"
 	);
+	if (!response.ok) {
+		throw new Error("Failed to fetch fairytale list");
+	}
+	const data = await response.json();
+	return data;
+}
+
+export default function Main({ searchTerm = "" }) {
+	const [fairytaleItems, setFairytaleItems] = useState([]);
+
+	useEffect(() => {
+		getFairytaleCardItems()
+			.then(setFairytaleItems)
+			.catch((err) => console.error(err));
+	}, []);
+
+	const filteredProjects = fairytaleItems.filter(
+		(project) =>
+			(project.fairytale && project.fairytale.toLowerCase().includes(searchTerm.toLowerCase())) ||
+			(project.nameStudent && project.nameStudent.toLowerCase().includes(searchTerm.toLowerCase()))
+	);
+
 	return (
 		<div className="wrapper-portaal">
-		<div className="container">
-			<h1>IN THE SPOTLIGHT</h1>
-			<div className="project-card-container">
-				{filteredProjects.slice(0, 4).map((project) => (
-					<ProjectCard key={project.id} project={project} />
-				))}
+			<div className="container">
+				<h1>IN THE SPOTLIGHT</h1>
+				<div className="project-card-container">
+					{filteredProjects.slice(0, 3).map((project) => (
+						<ProjectCard key={project.id} project={project} />
+					))}
+				</div>
+				<div className="button main">
+					<Link to={`/projects`}>
+						<button className="making-of">
+							<h3>ALL PROJECTS</h3>
+						</button>
+					</Link>
+				</div>
 			</div>
-			<div className="button main">
-				<Link to={`/projects`}>
-					<button className="making-of">
-						<h3>all projects</h3>
-					</button>
-				</Link>
-				<Link to={`/parallax`}>
-					<button className="making-of">
-						<h3>sprrokje</h3>
-					</button>
-				</Link>
-			</div>
-		</div>
 		</div>
 	);
 }

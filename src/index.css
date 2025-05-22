@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: "ledger", sans-serif;
+	background-color: #ebf4ec;
 }
 
 a {
@@ -45,6 +46,7 @@ footer {
 	align-items: center;
 	justify-content: center;
 	gap: 50px;
+	margin-top: 150px;
 }
 .about p {
 	margin-top: -20px;
@@ -75,6 +77,11 @@ nav a {
 	color: rgb(0, 0, 0);
 	text-decoration: none;
 	font-weight: 750;
+}
+
+.navlinks {
+	display: flex;
+	gap: 20px;
 }
 
 .searchFilter {
@@ -112,78 +119,78 @@ nav a {
 }
 
 .project-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
-  padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	justify-content: center;
+	padding: 20px;
 }
 
 .project-card {
-  width: 300px;
-  height: 450px; 
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  overflow: hidden;
+	width: 300px;
+	height: 450px;
+	background-color: #fff;
+	border-radius: 16px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	overflow: hidden;
 }
 
-
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+	transform: translateY(-4px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-card img {
-  width: 100%;
-  height: 380px; 
-  object-fit: cover;
-  display: block;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+	width: 100%;
+	height: 380px;
+	object-fit: cover;
+	display: block;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
 }
 .project-card-title {
-  font-size: 16px;
-  font-weight: 700;
-  margin-top: -320px;
-  color: #333;
-  font-family: "Helvetica Neue", sans-serif;
-  line-height: 1.4;
+	font-size: 16px;
+	font-weight: 700;
+
+	color: #333;
+	font-family: "Helvetica Neue", sans-serif;
+	line-height: 1.4;
 }
 
 .project-card-title b {
-  color: #767676;
-  font-weight: 600;
+	color: #767676;
+	font-weight: 600;
 }
 
 .flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 12px 12px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 12px 12px;
 }
 
 .project-card-info-icon {
-  width: 20px;
-  height: 20px;
-  background-color: #e51131;
-  border-radius: 50%;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
+	background-color: #e51131;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s ease;
+	cursor: pointer;
+}
+.project-card-info-icon img {
+	width: 40px;
+	height: 40px;
 }
 
 .project-card-info-icon:hover {
-  background-color: #cb102c;
+	background-color: #cb102c;
 }
 
 .wrapper-portaal {
-	/* background: url(portaal/background_image.png) no-repeat center top/cover;
-	background-attachment: fixed; */
-	background-color: #ebf4ec;
+	background: url(portaal/background_image.png) no-repeat center top/cover;
+	background-attachment: fixed;
 }
 .container {
 	max-width: 80%;
@@ -204,7 +211,7 @@ nav a {
 }
 .banner {
 	max-width: 100%;
-	height: 50%;
+	height: 40%;
 	object-fit: cover;
 	text-align: center;
 	border-radius: 20px;
@@ -220,12 +227,6 @@ nav a {
 	margin-bottom: 250px;
 	display: flex;
 	justify-content: center;
-}
-
-.navlinks {
-	display: flex;
-	gap: 380px;
-	justify-content: space-evenly;
 }
 
 .imagenav {
@@ -244,7 +245,7 @@ nav a {
 	margin: 0 auto;
 }
 .navba {
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 }
 
 .rectangle {

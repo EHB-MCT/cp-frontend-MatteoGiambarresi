@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <footer>
-        <img className= "image" src="/logo.png" alt="" />
+        <img src="https://res.cloudinary.com/dhvigmhgw/image/upload/v1747943203/logo_rje1hn.png" alt="" className="imagenav" />
         <div className="about">
             <h1>About Us</h1>
             <p>Welcome to a world where fairy tales scroll with depth. Through parallax <br />magic, we bring front-end stories to life — one layer at a time. ✨</p>
