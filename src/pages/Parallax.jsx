@@ -10,6 +10,7 @@ import Functionalities from "../components/Functionalities";
 import Text1 from "../components/Text1";
 import Text2 from "../components/Text2";
 import Text3 from "../components/Text3";
+import Text4 from "../components/Text4";
 import Notes from "../components/Notes";
 
 export default function ParallaxW() {
@@ -27,7 +28,7 @@ export default function ParallaxW() {
 	return (
 		<div className="wrapper">
 			<ZoomIn controls={controls} />
-			<Parallax pages={9} style={{ top: "0", left: "0" }} className="animation">
+			<Parallax pages={12} style={{ top: "0", left: "0" }} className="animation">
 				<Scene1 />
 				<Text1 ref1={ref1} inView1={inView1} />
 				<Scene2 controls2={controls2} controls3={controls3} />
@@ -36,6 +37,7 @@ export default function ParallaxW() {
         <Notes playSound={playSound} />
         <Text3 ref3={ref3} inView3={inView3} />
         <Scene4 ref4={ref4} inView4={inView4} />
+        <Text4 ref5={ref5} inView5={inView5} />
 			</Parallax>
 		</div>
 	);
