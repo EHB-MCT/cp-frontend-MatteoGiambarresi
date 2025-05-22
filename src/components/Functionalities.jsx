@@ -5,6 +5,7 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 export default function Functionalities() {
 	const controls = useAnimation();
 	const controls2 = useAnimation();
+    const controls3 = useAnimation();
 
 	useEffect(() => {
 		document.body.style.overflow = "hidden";
@@ -27,11 +28,17 @@ export default function Functionalities() {
 				right: "20%",
 				transition: { duration: 6, ease: "easeOut" },
 			});
+			controls3.start({
+				left: "10%",
+				transition: { duration: 5, ease: "easeOut", delay: 2 },
+			});
 		}
 	}, [inView1]);
 
 	return {
 		controls,
+        controls2,
+        controls3,
 		refs: [ref1],
 		inViews: [inView1],
 	};

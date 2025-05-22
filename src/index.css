@@ -235,7 +235,47 @@ b {
 }
 
 .text-layer p {
-	font-size: 50px;
+	font-size: 40px;
 	text-align: center;
 }
 
+.tree img {
+	width: 100%;
+	z-index: 1;
+	margin-bottom: 450px;
+}
+.move {
+	animation: wiggle 0.9s infinite alternate;
+}
+
+@keyframes wiggle {
+	0% {
+		transform: rotate(-1deg);
+	}
+	100% {
+		transform: rotate(1deg);
+	}
+}
+
+.rectangle2 {
+	position: relative;
+	display: flex;
+	top: 18%;
+	justify-content: center;
+	align-items: center;
+	height: 42%;
+}
+
+.mist2 {
+	position: absolute;
+	right: -100%;
+	width: 75%;
+	z-index: 2;
+}
+
+.rectangle3 {
+	position: relative;
+	top: 68%;
+	margin-left: 700px;
+	justify-content: center;
+}
