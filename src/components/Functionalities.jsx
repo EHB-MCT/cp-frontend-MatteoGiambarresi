@@ -1,0 +1,38 @@
+import { use, useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+export default function Functionalities() {
+	const controls = useAnimation();
+	const controls2 = useAnimation();
+
+	useEffect(() => {
+		document.body.style.overflow = "hidden";
+		controls
+			.start({
+				scale: 2,
+				transition: { duration: 4, ease: "easeInOut" },
+			})
+			.then(() => {
+				document.body.style.overflowY = "auto";
+			});
+	}, [controls]);
+	const inViewConfigs = [{ threshold: 0.5 }];
+	const inViews = inViewConfigs.map((cfg) => useInView(cfg));
+	const [ref1, inView1] = inViews[0];
+
+	useEffect(() => {
+		if (inView1) {
+			controls2.start({
+				right: "20%",
+				transition: { duration: 6, ease: "easeOut" },
+			});
+		}
+	}, [inView1]);
+
+	return {
+		controls,
+		refs: [ref1],
+		inViews: [inView1],
+	};
+}

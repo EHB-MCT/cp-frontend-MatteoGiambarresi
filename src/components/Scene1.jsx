@@ -48,7 +48,7 @@ export default function Scene1() {
 						scale: 2,
 					}}
 					transition={{
-						duration: 1,
+						duration: 2,
 						ease: "easeInOut",
 						delay: 2,
 					}}
