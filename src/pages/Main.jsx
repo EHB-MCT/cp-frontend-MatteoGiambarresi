@@ -2,7 +2,8 @@ import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import projectsData from "../data/projects.json";
 import { Link } from "react-router-dom";
-const Main = ({ searchTerm = "" }) => {
+
+export default function Main({ searchTerm = "" }) {
 	const filteredProjects = projectsData.filter(
 		(project) =>
 			project.fable_title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -31,6 +32,4 @@ const Main = ({ searchTerm = "" }) => {
 			</div>
 		</div>
 	);
-};
-
-export default Main;
+}

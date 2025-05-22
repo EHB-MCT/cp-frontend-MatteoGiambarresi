@@ -1,7 +1,7 @@
 import {Link } from "react-router-dom";
 import projects from "../data/projects.json";
 
-const ProjectDetail = () => {
+export default function ProjectDetail() {
   const project = projects.find(project => project.id);
 
   return (
@@ -11,6 +11,4 @@ const ProjectDetail = () => {
       <p>{project.description}</p>
     </div>
   );
-};
-
-export default ProjectDetail;
+}

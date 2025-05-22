@@ -1,7 +1,7 @@
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import projects from "../data/projects.json";
 
-const MakingOf = () => {
+export default function MakingOf() {
 	const project = projects.find((project) => project.id);
 
 	return (
@@ -29,6 +29,4 @@ const MakingOf = () => {
 			</div>
 		</div>
 	);
-};
-
-export default MakingOf;
+}

@@ -1,7 +1,7 @@
 import projectsData from "../data/projects.json";
 import ProjectCard from "../components/ProjectCard";
 
-const Projects = ({ searchTerm = "" }) => {
+export default function Projects({ searchTerm = "" }) {
 	const filteredProjects = projectsData.filter(
 		(project) =>
 			project.fable_title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -23,6 +23,4 @@ const Projects = ({ searchTerm = "" }) => {
 			</div>
 		</div>
 	);
-};
-
-export default Projects;
+}
