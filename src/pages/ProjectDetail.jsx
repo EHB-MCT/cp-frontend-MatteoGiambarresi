@@ -1,8 +1,8 @@
 import {Link } from "react-router-dom";
-import projects from "../data/projects.json";
+
 
 export default function ProjectDetail() {
-  const project = projects.find(project => project.id);
+  const project = project.find(project => project.id);
 
   return (
     <div className= "container">

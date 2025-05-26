@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+
 import { ParallaxLayer } from "@react-spring/parallax";
 import { motion } from "framer-motion";
 
