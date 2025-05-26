@@ -31,7 +31,7 @@ export default function MakingOf() {
 		<div className="container">
 			<div>
 				<h1>MAKING OF - {project.fairytale}</h1>
-				<img className="banner" src={project. imgBanner} alt="" />
+				<img className="banner" src={project.imgBanner} alt="" />
 			</div>
 			<div className="lower-part">
 				<div className="making-of-video">
@@ -42,7 +42,7 @@ export default function MakingOf() {
 					<h3>Description</h3>
 					<p>{project.description}</p>
 					<div className="button">
-						<Link to={`https://ehb-mct.github.io/cp-frontend-Sam-Hoeterickx/#/fairy-tale`}>
+						<Link to={project.fairytaleLink}>
 							<button className="making-of">
 								<h3>visit website</h3>
 							</button>

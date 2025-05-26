@@ -4,7 +4,7 @@ const ProjectCard = ({ project }) => {
 	return (
 		<div className="project-card-container">
 			<div className="project-card">
-				<Link to={`https://ehb-mct.github.io/cp-frontend-Sam-Hoeterickx/#/fairy-tale`}>
+				<Link to={project.fairytaleLink}>
 					<img src={project.imgThumbnail} />
 				</Link>
 				<div className="flex">
