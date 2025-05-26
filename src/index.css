@@ -198,6 +198,15 @@ nav a {
 .wrapper2 {
 	overflow: hidden;
 }
+
+.animation {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.animation::-webkit-scrollbar {
+	display: none;
+}
 .container {
 	max-width: 80%;
 	margin: 0 auto;

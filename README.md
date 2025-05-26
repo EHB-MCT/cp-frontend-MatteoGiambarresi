@@ -14,15 +14,15 @@ then
 
 
 ## Sources 🗃️
-- [@react-spring/parallax] (https://www.npmjs.com/package/@react-spring/parallax)
+- [@react-spring/parallax] (https://www.npmjs.com/package/@react-spring/parallax) used to create vertical parallax
 
-- [whileInView](https://motion.dev/docs/react-scroll-animations)
+- [whileInView](https://motion.dev/docs/react-scroll-animations) used to have a element / animation show only when it's in the view
 
-- [Auto-deploy](https://chatgpt.com/share/682b3eeb-8054-8003-ab2b-8ca273860191) 
+- [Auto-deploy](https://chatgpt.com/share/682b3eeb-8054-8003-ab2b-8ca273860191) used to fix deployment problem
 
-- [JSON fetch](https://teams.microsoft.com/l/message/19:042c620c44db44329da805eb6fceb701@thread.v2/1747862841699?context=%7B%22contextType%22%3A%22chat%22%7D)
+- [JSON fetch](https://teams.microsoft.com/l/message/19:042c620c44db44329da805eb6fceb701@thread.v2/1747862841699?context=%7B%22contextType%22%3A%22chat%22%7D) used to fetch the global JSON 
 
-- [404.html for refresh page fix](https://youtu.be/fuGu-Ponjf8?si=EZKZZdN1vtsjnxWW) used in public > 404.html
+- [404.html for refresh page fix](https://youtu.be/fuGu-Ponjf8?si=EZKZZdN1vtsjnxWW) used in public > 404.html to fix the refresh problem of the online website
 
 - [Audio Web API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio) used in src > components > Notes.jsx (line 13-16)
 
