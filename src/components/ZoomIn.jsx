@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 
-export function ZoomIn({ controls }) {
+export function ZoomIn() {
 	return (
 		<motion.div
 			initial={{ scale: 1 }}
-			animate={controls}
+			whileInView={{ scale: 2 }}
+			transition={{ duration: 5, ease: "easeOut" }}
+			viewport={{ once: true }}
 			style={{
 				position: "fixed",
 				top: 0,
@@ -16,7 +18,7 @@ export function ZoomIn({ controls }) {
 				pointerEvents: "none",
 			}}
 		>
-			<img src="./fable/bg.png" alt="Zoom Overlay" style={{ width: "100%", height: "100%" }} />
+			<img src="./fable/bg.png" style={{ width: "100%", height: "100%" }} />
 		</motion.div>
 	);
 }

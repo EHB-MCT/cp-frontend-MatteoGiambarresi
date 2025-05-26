@@ -42,9 +42,9 @@ export default function Scene1() {
 					left: 0,
 				}}
 			>
-			<motion.h1
+				<motion.h1
 					initial={{ scale: 1, opacity: 1 }}
-					animate={{
+					whileInView={{
 						scale: [1, 2, 2],
 						opacity: [1, 1, 0],
 					}}
@@ -54,6 +54,7 @@ export default function Scene1() {
 						ease: "easeInOut",
 						delay: 2,
 					}}
+					viewport={{ once: true }}
 					style={{
 						color: "#fff",
 						textAlign: "center",

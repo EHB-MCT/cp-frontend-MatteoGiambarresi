@@ -36,7 +36,7 @@ export default function MakingOf() {
 			<div className="lower-part">
 				<div className="making-of-video">
 					<h3>Explainer Video</h3>
-					<iframe width="700" height="350" src={project.videoExplainer} allowFullScreen></iframe>
+					<iframe width="700" height="350" src={`https://www.youtube.com/embed/${project.videoExplainer}`} allowFullScreen></iframe>
 				</div>
 				<div className="description">
 					<h3>Description</h3>

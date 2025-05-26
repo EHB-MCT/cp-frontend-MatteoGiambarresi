@@ -3,16 +3,15 @@ import { ParallaxLayer } from "@react-spring/parallax";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-export default function Text2({ ref2, inView2 }) {
+export default function Text2() {
 	return (
 		<ParallaxLayer offset={3.5} speed={0.1}>
 			<motion.div
 				className="rectangle"
-				ref={ref2}
 				initial={{ opacity: 0, y: 50 }}
-				animate={inView2 ? { opacity: 1, y: 0 } : {}}
-				transition={{ duration: 1 }}
-				style={{ position: "absolute", top: "20%", width: "100%", zIndex: 2 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.6 }}
+				viewport={{ amount: 0.5 }}
 			>
 				<div className="text-layer">
 					<p>
