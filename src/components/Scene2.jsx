@@ -63,15 +63,15 @@ export default function Scene2() {
 			</ParallaxLayer>
 			<ParallaxLayer offset={2} speed={0.2}>
 				<div className="tree">
-				   <motion.img
-					className="move"
-					src="./fable/wolf 1.png"
-					alt=""
-					initial={{ opacity: 0, y: 50 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					transition={{ duration: 1, delay: 2 }}
-					viewport={{ once: false }}
-				/>
+					<motion.img
+						className="move"
+						src="./fable/wolf 1.png"
+						alt=""
+						initial={{ opacity: 0, y: 50 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6 }}
+						viewport={{ amount: 0.5 }}
+					/>
 				</div>
 			</ParallaxLayer>
 		</>
