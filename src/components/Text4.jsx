@@ -1,8 +1,5 @@
 import { ParallaxLayer } from "@react-spring/parallax";
 import { motion } from "framer-motion";
-import { useRef } from "react";
-import { useInView } from "react-intersection-observer";
-
 export default function Text4() {
 	return (
 		<ParallaxLayer offset={8.5} speed={0.2}>
