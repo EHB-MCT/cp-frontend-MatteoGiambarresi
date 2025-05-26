@@ -5,11 +5,8 @@ async function getFairytaleCardItems() {
 	const response = await fetch(
 		"https://raw.githubusercontent.com/EHB-MCT/cp-frontend-MaximWesterbeek/refs/heads/main/course-project/public/api/fairytaleList.json"
 	);
-	if (!response.ok) {
-		throw new Error("Failed to fetch fairytale list");
-	}
-	const data = await response.json();
-	return data;
+	if (!response.ok) throw new Error("Failed to fetch fairytale list");
+	return response.json();
 }
 
 export default function MakingOf() {
@@ -18,37 +15,37 @@ export default function MakingOf() {
 
 	useEffect(() => {
 		getFairytaleCardItems()
-			.then((items) => {
-				const found = items.find((item) => String(item.id) === String(id));
-				setProject(found);
-			})
-			.catch((err) => console.error(err));
+			.then((items) => setProject(items.find((item) => item.id == id)))
+			.catch(console.error);
 	}, [id]);
 
 	if (!project) return <div>Loading...</div>;
 
 	return (
 		<div className="container">
-			<div>
-				<h1>MAKING OF - {project.fairytale}</h1>
-				<img className="banner" src={project.imgBanner} alt="" />
-			</div>
+			<h1>MAKING OF - {project.fairytale}</h1>
+			<img className="banner" src={project.imgBanner} alt={`${project.fairytale} banner`} />
+
 			<div className="lower-part">
-				<div className="making-of-video">
+				<section className="making-of-video">
 					<h3>Explainer Video</h3>
-					<iframe width="700" height="350" src={`https://www.youtube.com/embed/${project.videoExplainer}`} allowFullScreen></iframe>
-				</div>
-				<div className="description">
+					<iframe
+						width="700"
+						height="350"
+						src={`https://www.youtube.com/embed/${project.videoExplainer}`}
+						allowFullScreen
+					></iframe>
+				</section>
+
+				<section className="description">
 					<h3>Description</h3>
 					<p>{project.description}</p>
-					<div className="button">
-						<Link to={project.fairytaleLink}>
-							<button className="making-of">
-								<h3>visit website</h3>
-							</button>
-						</Link>
-					</div>
-				</div>
+					<Link to={project.fairytaleLink}>
+						<button className="making-of">
+							<h3>Visit Website</h3>
+						</button>
+					</Link>
+				</section>
 			</div>
 		</div>
 	);

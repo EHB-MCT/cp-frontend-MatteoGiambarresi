@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const ProjectCard = ({ project }) => {
+export default function ProjectCard({ project}) {
 	return (
 		<div className="project-card-container">
 			<div className="project-card">
@@ -16,7 +16,6 @@ const ProjectCard = ({ project }) => {
 						<div className="project-card-info-icon">
 							<img
 								src="https://res.cloudinary.com/dhvigmhgw/image/upload/v1747943203/info-icon_vcvzld.png"
-								alt="info icon"
 								className="info-icon-image"
 							/>
 						</div>
@@ -25,6 +24,4 @@ const ProjectCard = ({ project }) => {
 			</div>
 		</div>
 	);
-};
-
-export default ProjectCard;
+}

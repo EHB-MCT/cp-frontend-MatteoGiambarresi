@@ -1,7 +1,6 @@
-import React, { useRef } from "react";
 import { ParallaxLayer } from "@react-spring/parallax";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+
 
 export default function Text2() {
 	return (

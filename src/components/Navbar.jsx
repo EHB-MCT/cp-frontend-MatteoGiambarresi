@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import SearchFilter from "./SearchFilter";
 
-const Navbar = ({ searchTerm, setSearchTerm }) => {
+export default function Navbar({ searchTerm, setSearchTerm }) {
 	return (
 		<div className="container">
 			<div className="lower-part navba">
@@ -13,11 +13,9 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
 				<div className="description">
 					<div className="navlinks">
 						<div className="home">
-
-						
-						<Link to="/">
-							<h3>HOME</h3>
-						</Link>
+							<Link to="/">
+								<h3>HOME</h3>
+							</Link>
 						</div>
 						<Link to="/projects">
 							<h3>PROJECTS</h3>
@@ -38,6 +36,4 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
 			<div className="line"></div>
 		</div>
 	);
-};
-
-export default Navbar;
+}

@@ -1,4 +1,3 @@
-
 import { ZoomIn } from "../components/ZoomIn";
 import { Parallax } from "@react-spring/parallax";
 import Scene1 from "../components/Scene1";
@@ -15,9 +14,20 @@ import Text5 from "../components/Text5";
 import Notes from "../components/Notes";
 export default function ParallaxW() {
 	return (
-		<div className="wrapper2" style={{ backgroundColor: "#342e99" }}>
-			<div style={{ backgroundImage: "url(./fable/Background_fable.png)", backgroundSize: "cover", height: "100vh", width: "100%", position: "absolute", top: 0, left: 0, zIndex: -1, overflow: "hidden",   }}>
-			
+		<div className="wrapper2">
+			<div
+				style={{
+					backgroundImage: "url(./fable/Background_fable.png)",
+					backgroundSize: "cover",
+					height: "100vh",
+					width: "100%",
+					position: "absolute",
+					top: 0,
+					left: 0,
+					zIndex: -1,
+					overflow: "hidden",
+				}}
+			>
 				<ZoomIn />
 				<Parallax pages={12} style={{ top: "0", left: "0" }} className="animation">
 					<Scene1 />
@@ -37,4 +47,3 @@ export default function ParallaxW() {
 		</div>
 	);
 }
-
